@@ -1,0 +1,120 @@
+.MainHeading{
+  width : fit-content ;
+  margin : 20px auto ;
+  padding : 20px;
+  font-size : 2em ;
+  font-weight : 500 ;
+  position : relative ;
+}
+.MainHeading::after {
+  content : " "; 
+  position : absolute ;
+  bottom : 0px ;
+  left : 30% ;
+  width : 40% ;
+  height : 4px ;
+  background-color : #2caeba ;
+}
+
+
+.Container{
+  display : flex; 
+  width : 80vw ;
+  margin : 20px auto ;
+}
+.Container ul{
+  flex : 2 ;
+  margin : 20px 10px;
+  list-style : none ;
+  padding : 0px ;
+}
+.Container ul li button {
+  background-color : transparent ;
+  outline-color : #e0fcff ;
+  border : none ;
+  padding : 5px 25px ;
+  font-size : 1em ;
+  text-align : center ;
+  width : fit-content;
+  margin: 0px auto 20px auto ;
+  display : block ;
+  letter-spacing: 0.1rem;
+  font-weight : bold;
+
+}
+.Container ul li button.Active{
+  color : #2caeba ;
+  border-left : solid 4px #2caeba ;
+}
+
+
+.Container article{
+  flex : 4 ;
+  padding : 0px 20px ;
+}
+
+.Container article .Title{
+  font-weight :500 ;
+}
+.Container article .Comapany{
+  padding : 5px 15px ;
+  border-radius : 4px; 
+  background-color :#dae2ec ;
+  color : #617d98 ;
+  width: fit-content ;
+  font-weight : 500 ;
+}
+.Container article .Date {
+  color : #617d98 ;
+}
+.Container article ol{
+  list-style : none ;
+  color : #324d67 ;
+}
+.Container article ol li{
+  margin-bottom : 15px; 
+  line-height : 25px; 
+  letter-spacing: 1px;
+}
+.Container article .Button{
+  outline : none ;
+  border : none ;
+  text-align : center ;
+  text-transform: uppercase ;
+  padding : 10px 20px ;
+  background-color: #2caeba ;
+  color : #fff ;
+  font-size : 1em ;
+  border-radius : 5px ;
+  display : block ;
+  margin : 30px 10px  ;
+  width: 300px ;
+  cursor : pointer ;
+}
+@media screen and (max-width:785px){
+  .MainHeading  {
+    margin-bottom : 40px ;
+  }
+  .Container{
+    display : block ;
+  }
+  .Container ul {
+    display : flex ;
+    justify-content: space-between ;
+    width : fit-content ; 
+  }
+  .Container ul li .Active{
+    border-left : none !important;
+    border-bottom : solid 2px #2caeba ;
+  }
+}
+/* 505 */
+
+@media screen and (max-width:505px){
+  .Container{
+    width : 90% ;
+  }
+  .Container article ol{
+    padding : 0px ;
+  }
+}
